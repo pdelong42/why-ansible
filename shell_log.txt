@@ -1,0 +1,16 @@
+(●●) zellio@ostara:/tmp/tmp.4Iwy2DDGPT/foo [± master] % ansible-playbook -i production site.yml                    
+
+PLAY [server] ******************************************************************
+
+TASK [setup] *******************************************************************
+ok: [mama.wsli.us]
+
+TASK [debug] *******************************************************************
+ok: [mama.wsli.us] => {
+    "msg": "var = val"
+}
+
+PLAY RECAP *********************************************************************
+mama.wsli.us               : ok=2    changed=0    unreachable=0    failed=0   
+
+
