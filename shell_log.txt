@@ -1,11 +1,23 @@
-(●●) zellio@ostara:/tmp/tmp.4Iwy2DDGPT/foo [± master] % ansible-playbook -i production site.yml                    
+(●●) zellio@ostara:/tmp/tmp.4Iwy2DDGPT/foo [± master] % ansible-playbook -i production site.yml -vvvv
+Using /etc/ansible/ansible.cfg as config file
+Loaded callback default of type stdout, v2.0
+
+PLAYBOOK: site.yml *************************************************************
+1 plays in site.yml
 
 PLAY [server] ******************************************************************
 
 TASK [setup] *******************************************************************
+<mama.wsli.us> ESTABLISH SSH CONNECTION FOR USER: None
+<mama.wsli.us> SSH: EXEC ssh -C -vvv -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/zellio/.ansible/cp/ansible-ssh-%h-%p-%r mama.wsli.us '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo $HOME/.ansible/tmp/ansible-tmp-1472071757.05-250847375217750 `" && echo ansible-tmp-1472071757.05-250847375217750="` echo $HOME/.ansible/tmp/ansible-tmp-1472071757.05-250847375217750 `" ) && sleep 0'"'"''
+<mama.wsli.us> PUT /tmp/tmp5XH1Ba TO /home/zach/.ansible/tmp/ansible-tmp-1472071757.05-250847375217750/setup
+<mama.wsli.us> SSH: EXEC sftp -b - -C -vvv -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/zellio/.ansible/cp/ansible-ssh-%h-%p-%r '[mama.wsli.us]'
+<mama.wsli.us> ESTABLISH SSH CONNECTION FOR USER: None
+<mama.wsli.us> SSH: EXEC ssh -C -vvv -o ControlMaster=auto -o ControlPersist=60s -o KbdInteractiveAuthentication=no -o PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey -o PasswordAuthentication=no -o ConnectTimeout=10 -o ControlPath=/home/zellio/.ansible/cp/ansible-ssh-%h-%p-%r -tt mama.wsli.us '/bin/sh -c '"'"'LANG=en_US.utf8 LC_ALL=en_US.utf8 LC_MESSAGES=en_US.utf8 /usr/bin/python /home/zach/.ansible/tmp/ansible-tmp-1472071757.05-250847375217750/setup; rm -rf "/home/zach/.ansible/tmp/ansible-tmp-1472071757.05-250847375217750/" > /dev/null 2>&1 && sleep 0'"'"''
 ok: [mama.wsli.us]
 
 TASK [debug] *******************************************************************
+task path: /tmp/tmp.4Iwy2DDGPT/foo/site.yml:4
 ok: [mama.wsli.us] => {
     "msg": "var = val"
 }
